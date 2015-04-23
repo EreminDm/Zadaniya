@@ -1,12 +1,13 @@
 var mass = [1,2,3,4,5];
-var umn =1;
+var summ =0;
+
 var i;
 
 for (i=0;i<mass.length;i++) {
 	
 	var t=mass[0+i];
 
-	umn=t*umn;
+	summ=t+summ;
 	
 }
-console.log(umn);
+console.log(summ);
