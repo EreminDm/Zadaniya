@@ -15,9 +15,4 @@ for (i=0;i<mass.length-1;i++) {
 	console.log ("n="+n);
 }
 
-
-
-
-
 console.log(mass1);
-
