@@ -1,41 +1,35 @@
 var fs = require('fs');
-var Filelist=[];
-var Dirlist=[];
-
- 
-		   
-		 
-fs.realpath('C:/', function(err, path) {
+var Filelist = [];
+var Dirlist= [];
+fs.realpath('C:/Users/Admin/Documents/GitHub/Zadaniya/', function(err, path) {
 	if (err) {
-		console.log(err);
-		return;
-	} var a = path.join("C:/Users/u", file);  
-         var stat = null; 
-         try{ 
-             stat = fs.statSync(a); 
-         }
-	console.log('Path is : ' + file);
+	console.log(err);
+	return;
+}
+	console.log('Path is : ' + path);
 });
-	 
-
-
-fs.readdirSync('C:/', function(err, files) {
-	
+fs.readdir('C:/Users/Admin/Documents/GitHub/Zadaniya/', function(err, files) {
 	if (err) return;
-
-
-	files.forEach (function(f) {
-		
-		if (stat.isFile()) { 
-             Filelist.push(f); 
-         } else { 
-             Dirlist.push(f); 
-      }; 
-return f;
-	});
-
+	for (var i in files) {
+	var currentFile = 'C:/Users/Admin/Documents/GitHub/Zadaniya/' + files[i];
+	try {
+			var stats=fs.statSync(currentFile);
+			if (stats.isFile()){
+				Filelist.push(currentFile);
+			}
+			else { 
+				Dirlist.push (currentFile);
+			}
+		}
+		catch (e) {
+			console.log (e);
+		}
+	}
+	for (t=0;t<Dirlist.length;t++) {
+									console.log("Dir "+Dirlist[t]);
+	}
+	for (k=0;k<Filelist.length;k++) {
+									console.log("File "+Filelist[k]);
+	}
+	
 });
-		   
-console.log (Filelist);
-console.log (Dirlist);
-		   
