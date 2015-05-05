@@ -1,11 +1,4 @@
-var massGi=[9.8,3.711];
-for (i=0;i<massGi.length;i++){
-
-	
-	g=massGi[i];
-	console.log ("Ускорение = "+g);
-		
-		
+var g = 0;
 		
 	function Dist (t) {
 		var t2 =Math.pow (t,2);
@@ -27,20 +20,20 @@ for (i=0;i<massGi.length;i++){
 		return speedsqr;	
 		}
 
+	function MakeAll (PlanetName,l,p,gravityConst){
+		g = gravityConst;
+		j1=Dist(l);
+		j2=Speed(l);
+		j3=Time(p);
+		j4=EndSpeed(p);
 
-	var l=20;
-	var p=200;
-	j1=Dist(l);
-	j2=Speed(l);
-	j3=Time(p);
-	j4=EndSpeed(p);
+		console.log (PlanetName);
+		console.log ("Растояние за "+l+"сек= "+ j1);
+		console.log ("Скорость по прошествии "+l+"сек="+j2);
+		console.log ("Время свободного падения с высоты "+l+"м="+j3);
+		console.log ("Скорость падения с высоты "+p+"м="+j4);
 
+	}
 
-	console.log ("Растояние за "+l+"сек= "+ j1);
-	console.log ("Скорость по прошествии "+l+"сек="+j2);
-	console.log ("Время свободного падения с высоты "+l+"м="+j3);
-	console.log ("Скорость падения с высоты "+p+"м="+j4);
-	
-}
-	
-	
+MakeAll("Earth", 20,200,9.8);
+MakeAll("Mars", 20,200,3.71);	
