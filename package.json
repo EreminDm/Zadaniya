@@ -1,0 +1,28 @@
+{
+  "name": "Zadaniya",
+  "version": "1.0.1",
+  "description": "request module",
+  "main": "fermakorov.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EreminDm/Zadaniya.git"
+  },
+  "keywords": [
+    "Git"
+  ],
+  "author": "Di",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EreminDm/Zadaniya/issues"
+  },
+  "homepage": "https://github.com/EreminDm/Zadaniya",
+  "dependencies": {
+    "axios": "^0.5.4",
+    "cheerio": "^0.19.0",
+    "request": "^2.55.0",
+    "string": "^3.1.1"
+  }
+}
