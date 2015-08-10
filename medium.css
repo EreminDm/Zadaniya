@@ -1,0 +1,8 @@
+@media (max-width: 930px) and (min-width: 470px) {
+	div.first{
+		display:none;
+	}
+	body {
+		background-color: lightcyan;
+	}
+}

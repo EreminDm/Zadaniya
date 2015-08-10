@@ -1,0 +1,5 @@
+@media (max-width: 469px) {
+	div.third {
+		display:none;
+	}
+}
